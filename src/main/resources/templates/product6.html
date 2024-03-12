@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body class="text-center">
+    <div class="container">
+      <h2 class="mt-4 mb-4">Product Details</h2>
+
+      <div class="card mx-auto" style="max-width: 400px">
+        <img
+          th:src="@{/images/product-6.png}"
+          class="card-img-top"
+          alt="Product Image"
+        />
+        <div class="card-body">
+          <h5 class="card-title">
+            Gaming PC Ryzen 5 4500 | GTX 1650 4GB Gaming Graphic Card | 8GB DDR4
+            RAM| 128 GB NVMe SSD and 1TB HDD| 300Mbps WiFi
+          </h5>
+          <p class="card-text">
+            AMD Ryzen 5 4500 6 Core/12 Thread 4.1GHz Turbo CPU - Awesome
+            Performance for power-hungry applications and gaming.
+            <br />8GB 3200MHz DDR4 RAM | storage for all your files, games and
+            data on the 128GB NVMe SSD AND 1TB HARD DISK, plus 300mbps WiFi
+            <br />4x RGB RING Fans for Maximum Air Flow | 1Year Warranty on
+            Parts and Labor | 450 Watt Power Supply | Gaming Case with Tempered
+            Glass - White <br />GTX 1650 DDR6 4GB
+          </p>
+          <p class="card-text">Price: ₹39,999</p>
+          <form
+            th:action="@{/submit-form}"
+            method="post"
+            onsubmit="return submitForm();"
+          >
+            <button type="submit" class="btn btn-primary">Submit Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script th:inline="javascript">
+      /*<![CDATA[*/
+      function submitForm() {
+        var isSuccess = true;
+
+        if (isSuccess) {
+          $("#successModal").modal("show");
+          setTimeout(function () {
+            window.location.href = "/mainpage";
+          }, 3000);
+          return false;
+        } else {
+          alert("Order submission failed. Please try again.");
+          return false;
+        }
+      }
+      /*]]>*/
+    </script>
+    <div
+      class="modal fade"
+      id="successModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="successModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="successModalLabel">
+              Order Submitted Successfully
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Thank you for your order! Redirecting to the main page...
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body class="text-center">
+    <div class="container">
+      <h2 class="mt-4 mb-4">Product Details</h2>
+
+      <div class="card mx-auto" style="max-width: 400px">
+        <img
+          th:src="@{/images/product-12.png}"
+          class="card-img-top"
+          alt="Product Image"
+        />
+        <div class="card-body">
+          <h5 class="card-title">
+            ASUS ROG Strix 8 Core, AMD Ryzen 7 5800X, Gaming Desktop 32GB/1TB
+            HDD + 1TB SSD/10GB NVIDIA GeForce RTX 3080 Graphics
+          </h5>
+          <p class="card-text">
+            rocessor: AMD Ryzen 7 5800X Desktop , 8-core/16-thread, 36MB cache,
+            up to 4.7 GHz max boost
+            <br />Memory: 32GB (16GB LO-DIMM *2) DDR4-3200MHz, Support Up to
+            128GB | Storage: 1TB M.2 NVMe PCIe 4.0 SSD + 1TB SATA 7200RPM 3.5"
+            HDD; Graphics: Dedicated NVIDIA GeForce RTX 3070 8GB GDDR6 VRAM with
+            LHR [ 3x DP, 2x HDMI ]
+          </p>
+          <p class="card-text">Price: ₹2,78,990</p>
+          <form
+            th:action="@{/submit-form}"
+            method="post"
+            onsubmit="return submitForm();"
+          >
+            <button type="submit" class="btn btn-primary">Submit Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script th:inline="javascript">
+      /*<![CDATA[*/
+      function submitForm() {
+        var isSuccess = true;
+
+        if (isSuccess) {
+          $("#successModal").modal("show");
+          setTimeout(function () {
+            window.location.href = "/mainpage";
+          }, 3000);
+          return false;
+        } else {
+          alert("Order submission failed. Please try again.");
+          return false;
+        }
+      }
+      /*]]>*/
+    </script>
+    <div
+      class="modal fade"
+      id="successModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="successModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="successModalLabel">
+              Order Submitted Successfully
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Thank you for your order! Redirecting to the main page...
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
