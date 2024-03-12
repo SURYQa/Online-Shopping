@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+    <link th:href="@{css/style.css}" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!---------- Logo and Search Panel Starts --------->
+    <div class="width-100 search-panel">
+      <div class="container">
+        <div class="width-20">
+          <img src="images/logo.png" class="logo" />
+        </div>
+        <div class="width-50">
+          <input
+            class="search-textbox"
+            type="text"
+            placeholder="Search for products, brand and more"
+          />
+          <button class="search-button">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="width-30">
+          <ul class="cart-sect">
+            <li>
+              <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+              <a th:href="@{/logout}" class="text-primary">Logout</a>
+            </li>
+            <li>
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <a href="#">Cart (0)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!---------- Logo and Search Panel Ends --------->
+
+    <!---------- Main Menu Starts --------->
+    <div
+      class="width-100"
+      style="color: #1a1919; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)"
+    >
+      <div class="container main-menu heading">
+        <h1 class="welcome text-center text-light" style="color: #000000e8">
+          WELCOME TO MY SHOPPING PAGE CLICK ANY PRODUCT AND PROCEED TO BUY
+        </h1>
+      </div>
+    </div>
+    <!---------- Main Menu Ends --------->
+    <!---------- Slider Starts --------->
+    <div class="width-100">
+      <img
+        class="wimg100 slider"
+        th:src="@{/images/slider-1.jpg}"
+        style="
+          border: 2px solid #ddd;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+        "
+      />
+    </div>
+    <!---------- Slider Ends --------->
+    <!---------- Banner Starts --------->
+    <div class="width-100 margin-top-50">
+      <div class="container1">
+        <div class="banner">
+          <div class="width-33">
+            <div class="banner-list">
+              <a href="#">
+                <img
+                  class="wimg100 ban1"
+                  src="images/banner-1.png"
+                  style="
+                    border: 5px solid #ddd;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.623);
+                  "
+                />
+              </a>
+            </div>
+          </div>
+          <div class="width-33">
+            <div class="banner-list">
+              <a href="#">
+                <img
+                  class="wimg100 ban2"
+                  src="images/banner-2.jpg"
+                  style="
+                    border: 5px solid #ddd;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.623);
+                  "
+                />
+              </a>
+            </div>
+          </div>
+          <div class="width-33">
+            <div class="banner-list">
+              <a href="#">
+                <img
+                  class="wimg100 ban3"
+                  src="images/banner-3.webp"
+                  style="
+                    border: 5px solid #ddd;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.623);
+                  "
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------- Banner Ends --------->
+    <!-- Product-Section STARTS -->
+    <div class="all-product">
+      <div class="container">
+        <div class="width-25">
+          <div class="product-section">
+            <div class="product-border">
+              <div class="product-img-center">
+                <a th:href="@{/product1.html}">
+                  <img class="product-img" src="images/product-1.jpg" />
+                </a>
+              </div>
+              <div>
+                <p class="product-name">
+                  <a>GEFORCE GTX 1050 8GB</a>
+                </p>
+                <p class="product-rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>(5)</span>
+                </p>
+                <p class="product-price">
+                  <span class="product-discounted-price">₹10,999</span>
+                  <span class="product-original-price">₹26,999</span>
+                  <span class="product-discount">59%OFF</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-25">
+          <div class="product-section">
+            <div class="product-border">
+              <div class="product-img-center">
+                <a href="product2.html">
+                  <img class="product-img" src="images/product-2.png" />
+                </a>
+              </div>
+              <div>
+                <p class="product-name">
+                  <a>GEFORCE RTX 4090 24GB</a>
+                </p>
+                <p class="product-rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>(5)</span>
+                </p>
+                <p class="product-price">
+                  <span class="product-discounted-price">₹2,69,999.00</span>
+                  <span class="product-original-price">₹3,25,000.00</span>
+                  <span class="product-discount">17%OFF</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-25">
+          <div class="product-section">
+            <div class="product-border">
+              <div class="product-img-center">
+                <a href="product3.html">
+                  <img class="product-img" src="images/product-3.png" />
+                </a>
+              </div>
+              <div>
+                <p class="product-name">
+                  <a>Keyboard & Mouse combo</a>
+                </p>
+                <p class="product-rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>(5)</span>
+                </p>
+                <p class="product-price">
+                  <span class="product-discounted-price">₹1,299</span>
+                  <span class="product-original-price">₹1,599</span>
+                  <span class="product-discount">19%OFF</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-25">
+          <div class="product-section">
+            <div class="product-border">
+              <div class="product-img-center">
+                <a href="product4.html">
+                  <img class="product-img" src="images/product-4.png" />
+                </a>
+              </div>
+              <div>
+                <p class="product-name">
+                  <a>BenQ 22" inch Monitor</a>
+                </p>
+                <p class="product-rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>(5)</span>
+                </p>
+                <p class="product-price">
+                  <span class="product-discounted-price">₹7,299</span>
+                  <span class="product-original-price">₹13,900</span>
+                  <span class="product-discount">47%OFF</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-25">
+          <div class="product-section">
+            <div class="product-border">
+              <div class="product-img-center">
+                <a href="product5.html">
+                  <img class="product-img" src="images/product-5.jpg" />
+                </a>
+              </div>
+              <div>
+                <p class="product-name">
+                  <a>Razer Gaming Mouse</a>
+                </p>
+                <p class="product-rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>(5)</span>
+                </p>
+                <p class="product-price">
+                  <span class="product-discounted-price">₹1,349</span>
+                  <span class="product-original-price">₹4,400</span>
+                  <span class="product-discount">69%OFF</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-25">
+          <div class="product-section">
+            <div class="product-border">
+              <div class="product-img-center">
+                <a href="product6.html">
+                  <img class="product-img" src="images/product-6.png" />
+                </a>
+              </div>
+              <div>
+                <p class="product-name">
+                  <a>Gaming PC Ryzen 5 4500 GTX 1650 4GB </a>
+                </p>
+                <p class="product-rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>(5)</span>
+                </p>
+                <p class="product-price">
+                  <span class="product-discounted-price">₹39,999</span>
+                  <span class="product-original-price">₹51,099</span>
+                  <span class="product-discount">33%OFF</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-25">
+          <div class="product-section">
+            <div class="product-border">
+              <div class="product-img-center">
+                <a href="product7.html">
+                  <img class="product-img" src="images/product-7.png" />
+                </a>
+              </div>
+              <div>
+                <p class="product-name">
+                  <a>Amd Gamer Pc Ryzen 3 3300X 4Core 8Threats</a>
+                </p>
+                <p class="product-rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>(5)</span>
+                </p>
+                <p class="product-price">
+                  <span class="product-discounted-price">₹33,600</span>
+                  <span class="product-original-price">₹42,000</span>
+                  <span class="product-discount">20%OFF</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-25">
+          <div class="product-section">
+            <div class="product-border">
+              <div class="product-img-center">
+                <a href="product8.html">
+                  <img class="product-img" src="images/product-8.jpg" />
+                </a>
+              </div>
+              <div>
+                <p class="product-name">
+                  <a
+                    >Samsung 55"inch Odyssey Ark,4K UHD Curved Gaming Monitor</a
+                  >
+                </p>
+                <p class="product-rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>(5)</span>
+                </p>
+                <p class="product-price">
+                  <span class="product-discounted-price">₹2,35,999</span>
+                  <span class="product-original-price">₹2,99,999</span>
+                  <span class="product-discount">21%OFF</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-25">
+          <div class="product-section">
+            <div class="product-border">
+              <div class="product-img-center">
+                <a href="product9.html">
+                  <img class="product-img" src="images/product-9.png" />
+                </a>
+              </div>
+              <div>
+                <p class="product-name">
+                  <a>HP K300 Backlit Membrane Wired Gaming Keyboard</a>
+                </p>
+                <p class="product-rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>(5)</span>
+                </p>
+                <p class="product-price">
+                  <span class="product-discounted-price">₹799</span>
+                  <span class="product-original-price">₹1,799</span>
+                  <span class="product-discount">56%OFF</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-25">
+          <div class="product-section">
+            <div class="product-border">
+              <div class="product-img-center">
+                <a href="product10.html">
+                  <img class="product-img" src="images/product-10.png" />
+                </a>
+              </div>
+              <div>
+                <p class="product-name">
+                  <a>Acer Nitro 23"inch Gaming LCD Monitor</a>
+                </p>
+                <p class="product-rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>(5)</span>
+                </p>
+                <p class="product-price">
+                  <span class="product-discounted-price">₹9,699</span>
+                  <span class="product-original-price">₹24,000</span>
+                  <span class="product-discount">60%OFF</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-25">
+          <div class="product-section">
+            <div class="product-border">
+              <div class="product-img-center">
+                <a href="product11.html">
+                  <img class="product-img" src="images/product-11.jpg" />
+                </a>
+              </div>
+              <div>
+                <p class="product-name">
+                  <a>Gigabyte GeForce GTX 1660 Ti OC 6GB</a>
+                </p>
+                <p class="product-rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>(5)</span>
+                </p>
+                <p class="product-price">
+                  <span class="product-discounted-price">25,999</span>
+                  <span class="product-original-price">65,000</span>
+                  <span class="product-discount">60%OFF</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-25">
+          <div class="product-section">
+            <div class="product-border">
+              <div class="product-img-center">
+                <a href="product12.html">
+                  <img class="product-img" src="images/product-12.png" />
+                </a>
+              </div>
+              <div>
+                <p class="product-name">
+                  <a>ROG Strix, 8 Core, AMD Ryzen7 5800X, RTX 3080</a>
+                </p>
+                <p class="product-rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>(5)</span>
+                </p>
+                <p class="product-price">
+                  <span class="product-discounted-price">2,78,990</span>
+                  <span class="product-original-price">4,55,990</span>
+                  <span class="product-discount">39%OFF</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-25">
+          <div class="product-section">
+            <div class="product-border">
+              <div class="product-img-center">
+                <a href="product13.html">
+                  <img class="product-img" src="images/product-13.jpg" />
+                </a>
+              </div>
+              <div>
+                <p class="product-name">
+                  <a>Redragon K617 Wired RGB Gaming Keyboard & Mouse</a>
+                </p>
+                <p class="product-rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>(5)</span>
+                </p>
+                <p class="product-price">
+                  <span class="product-discounted-price">₹2,750</span>
+                  <span class="product-original-price">₹3,499</span>
+                  <span class="product-discount">21%OFF</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-25">
+          <div class="product-section">
+            <div class="product-border">
+              <div class="product-img-center">
+                <a href="product14.html">
+                  <img class="product-img" src="images/product-14.png" />
+                </a>
+              </div>
+              <div>
+                <p class="product-name">
+                  <a>Extreme Gaming Pc Core I7-860 Gt 710 Graphics</a>
+                </p>
+                <p class="product-rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>(5)</span>
+                </p>
+                <p class="product-price">
+                  <span class="product-discounted-price">19,999</span>
+                  <span class="product-original-price">39,999</span>
+                  <span class="product-discount">50%OFF</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-25">
+          <div class="product-section">
+            <div class="product-border">
+              <div class="product-img-center">
+                <a href="product15.html">
+                  <img class="product-img" src="images/product-15.png" />
+                </a>
+              </div>
+              <div>
+                <p class="product-name">
+                  <a>Samsung 27"inch Odyssey G5 Gaming,Curved LCD Monito</a>
+                </p>
+                <p class="product-rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>(5)</span>
+                </p>
+                <p class="product-price">
+                  <span class="product-discounted-price">₹24,449</span>
+                  <span class="product-original-price">₹50,000</span>
+                  <span class="product-discount">51%OFF</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-25">
+          <div class="product-section">
+            <div class="product-border">
+              <div class="product-img-center">
+                <a href="product16.html">
+                  <img class="product-img" src="images/product-16.png" />
+                </a>
+              </div>
+              <div>
+                <p class="product-name">
+                  <a>Logitech G13 Prodigy USB Gaming Keyboard & Mouse</a>
+                </p>
+                <p class="product-rating">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>(5)</span>
+                </p>
+                <p class="product-price">
+                  <span class="product-discounted-price">₹4,249</span>
+                  <span class="product-original-price">₹5,295</span>
+                  <span class="product-discount">20%OFF</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------- Product-Section Ends --------->
+    <!-- Featured-Section HTML Code STARTS -->
+    <div class="width-100 margin-top-50 feature-sect">
+      <div class="container">
+        <div class="width-20 featured-padding">
+          <div class="featured-border">
+            <div class="width-20 featured-content">
+              <i class="fa fa-truck" aria-hidden="true"></i>
+            </div>
+            <div class="width-80 featured-content margin-top-8">
+              <h4>Instant Delivery</h4>
+              <p>One day shipping on all order</p>
+            </div>
+          </div>
+        </div>
+        <div class="width-20">
+          <div class="featured-border">
+            <div class="featured-bord">
+              <div class="width-20 featured-content">
+                <i class="fa fa-circle-o" aria-hidden="true"></i>
+              </div>
+              <div class="width-80 featured-content margin-top-8">
+                <h4>ONLINE SUPPORT 24/7</h4>
+                <p>Support online 24 hours a day</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-20">
+          <div class="featured-border">
+            <div class="width-20 featured-content">
+              <i class="fa fa-life-ring" aria-hidden="true"></i>
+            </div>
+            <div class="width-80 featured-content margin-top-8">
+              <h4>TRY AND BUY</h4>
+              <p>Try Product, If you like it then buy it</p>
+            </div>
+          </div>
+        </div>
+        <div class="width-20">
+          <div class="featured-border">
+            <div class="width-20 featured-content">
+              <i class="fa fa-gift" aria-hidden="true"></i>
+            </div>
+            <div class="width-80 featured-content margin-top-8">
+              <h4>INSTANT DISCOUNT</h4>
+              <p>Upto 50% instant discount on all product</p>
+            </div>
+          </div>
+        </div>
+        <div class="width-20">
+          <div class="featured-border">
+            <div class="width-20 featured-content">
+              <i class="fa fa-credit-card" aria-hidden="true"></i>
+            </div>
+            <div class="width-80 featured-content margin-top-8">
+              <h4>SECURE PAYMENT</h4>
+              <p>All cards accepted</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------- Featured-Section HTML Code Ends --------->
+    <!-- Footer-Section HTML Code STARTS -->
+    <div class="width-100 margin-top-50 footer">
+      <div class="container">
+        <div class="width-25">
+          <h2 class="quicklink-heading">Account Detail</h2>
+          <ul class="quicklink-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">Checkout</a></li>
+          </ul>
+        </div>
+        <div class="width-50 contactus">
+          <h2 class="quicklink-heading">GET IN TOUCH</h2>
+          <ul class="get-in-touch">
+            <li>
+              <i class="fa fa-envelope-o" aria-hidden="true"></i> E-MAIL:<a
+                href="#"
+                class="footer-e-mail"
+              >
+                info@gmail.com</a
+              >
+            </li>
+            <li>
+              <i class="fa fa-headphones" aria-hidden="true"></i> WHATS-APP: +91
+              -987654321
+            </li>
+            <li>
+              <i class="fa fa-fax" aria-hidden="true"></i> CONTACT NO.: +91
+              9876543210
+            </li>
+            <li>
+              <i class="fa fa-globe" aria-hidden="true"></i> WEBSITE:<a
+                href="#"
+                class="footer-website"
+              >
+                https://www.onlineshoping.com</a
+              >
+            </li>
+          </ul>
+          <ul class="social-media">
+            <li>
+              <a href="#"><img src="images/icon-facebook.png" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/icon-twitter.png" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/icon-linkedin.png" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/icon-instagram.png" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!---------- Footer-Section HTML Code Ends --------->
+  </body>
+</html>
